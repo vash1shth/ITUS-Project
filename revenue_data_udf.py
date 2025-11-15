@@ -1,0 +1,93 @@
+import sqlite3
+import os
+import time
+import configparser
+from functools import lru_cache
+import logging
+from logging.handlers import RotatingFileHandler
+
+# Load config.ini
+def load_config():
+    config = configparser.ConfigParser()
+    config_paths = [
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.ini"),
+        os.path.join(os.getcwd(), "config.ini"),
+    ]
+    for cp in config_paths:
+        if os.path.exists(cp):
+            config.read(cp)
+            if "DATABASE" in config:
+                return config
+    raise FileNotFoundError("config.ini not found in script or working directory")
+
+CONFIG = load_config()
+DB_PATH = CONFIG["DATABASE"].get("db_path", "revenue.db")
+TABLE_NAME = CONFIG["DATABASE"].get("table_name", "quarterly_revenue")
+
+ALLOWED_FIELDS = {
+    "quarterly_revenue", "company_name", "sector", "mcap_category", "date", "accord_code"
+}
+
+LOG_FILE = "query_log.txt"
+logger = logging.getLogger("revenue_udf")
+logger.setLevel(logging.INFO)
+if not logger.handlers:
+    handler = RotatingFileHandler(LOG_FILE, maxBytes=1_000_000, backupCount=3)
+    formatter = logging.Formatter("%(asctime)s | %(levelname)s | %(message)s")
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
+def log_call(func_name, params, start, success=True, msg=""):
+    elapsed = (time.perf_counter() - start) * 1000
+    status = "SUCCESS" if success else "FAIL"
+    logger.info(f"{func_name} | params={params} | time_ms={elapsed:.2f} | {status} | {msg}")
+
+def get_connection():
+    if not os.path.exists(DB_PATH):
+        raise FileNotFoundError(f"Database not found: {DB_PATH}")
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+def _is_allowed_field(field):
+    return field in ALLOWED_FIELDS
+
+def _friendly_error(e):
+    return f"ERROR: {type(e).__name__}: {e}"
+
+@lru_cache(maxsize=2048)
+def _cached_single_lookup(accord_code, field, date):
+    start = time.perf_counter()
+    date = date + " 00:00:00"
+    params = {"accord_code": accord_code, "field": field, "date": date}
+    try:
+        if not _is_allowed_field(field):
+            raise ValueError(f"Field '{field}' not allowed.")
+        with get_connection() as conn:
+            cur = conn.cursor()
+            query = f"SELECT {field} FROM {TABLE_NAME} WHERE accord_code=? AND date=? LIMIT 1"
+            cur.execute(query, (accord_code, date))
+            row = cur.fetchone()
+            if row is None:
+                log_call("_cached_single_lookup", params, start, False, "No data")
+                return None
+            val = row[field]
+            log_call("_cached_single_lookup", params, start, True)
+            return val
+    except Exception as e:
+        log_call("_cached_single_lookup", params, start, False, str(e))
+        raise
+
+def get_quarterly_data(accord_code, field, date):
+    start = time.perf_counter()
+    params = {"accord_code": accord_code, "field": field, "date": date}
+    try:
+        accord_code = int(accord_code)
+        if not _is_allowed_field(field):
+            return f"ERROR: Field '{field}' not allowed."
+        value = _cached_single_lookup(accord_code, field, date)
+        log_call("get_quarterly_data", params, start, True)
+        return value if value is not None else "N/A"
+    except Exception as e:
+        log_call("get_quarterly_data", params, start, False, str(e))
+        return _friendly_error(e)
