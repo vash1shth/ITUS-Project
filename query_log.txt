@@ -1,0 +1,48 @@
+2025-11-15 08:43:56,753 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=0.01 | FAIL | Database not found: "/Users/vanshikabakshi/Desktop/ITUS Project/revenue.db"
+2025-11-15 08:43:56,753 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=0.65 | FAIL | Database not found: "/Users/vanshikabakshi/Desktop/ITUS Project/revenue.db"
+2025-11-15 08:45:42,374 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=0.01 | FAIL | Database not found: "/Users/vanshikabakshi/Desktop/ITUS Project/revenue.db"
+2025-11-15 08:45:42,374 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=0.60 | FAIL | Database not found: "/Users/vanshikabakshi/Desktop/ITUS Project/revenue.db"
+2025-11-15 08:49:10,570 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=0.01 | FAIL | Database not found: "/Users/vanshikabakshi/Desktop/ITUS Project/revenue.db"
+2025-11-15 08:49:10,571 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=0.72 | FAIL | Database not found: "/Users/vanshikabakshi/Desktop/ITUS Project/revenue.db"
+2025-11-15 08:59:54,534 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=0.01 | FAIL | Database not found: "/Users/vanshikabakshi/Desktop/ITUS Project/revenue.db"
+2025-11-15 08:59:54,534 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=0.52 | FAIL | Database not found: "/Users/vanshikabakshi/Desktop/ITUS Project/revenue.db"
+2025-11-15 09:09:55,264 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=5.61 | FAIL | No data
+2025-11-15 09:09:55,264 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.14 | SUCCESS | 
+2025-11-15 09:29:04,791 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=10.59 | FAIL | No data
+2025-11-15 09:29:04,792 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=11.26 | SUCCESS | 
+2025-11-15 09:33:27,449 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.30 | FAIL | No data
+2025-11-15 09:33:27,449 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.82 | SUCCESS | 
+2025-11-15 09:34:47,489 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=8.13 | FAIL | No data
+2025-11-15 09:34:47,490 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=8.92 | SUCCESS | 
+2025-11-15 09:35:23,221 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.44 | FAIL | No data
+2025-11-15 09:35:23,222 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.84 | SUCCESS | 
+2025-11-15 09:39:00,493 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=7.42 | FAIL | No data
+2025-11-15 09:39:00,494 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=8.39 | SUCCESS | 
+2025-11-15 10:21:25,293 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=5.45 | FAIL | No data
+2025-11-15 10:21:25,294 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.17 | SUCCESS | 
+2025-11-15 10:21:36,618 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=5.87 | FAIL | No data
+2025-11-15 10:21:36,618 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.18 | SUCCESS | 
+2025-11-15 10:22:49,567 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=5.95 | FAIL | No data
+2025-11-15 10:22:49,568 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.29 | SUCCESS | 
+2025-11-15 10:28:31,689 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.43 | FAIL | No data
+2025-11-15 10:28:31,690 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=7.26 | SUCCESS | 
+2025-11-15 10:49:28,182 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=11.49 | FAIL | No data
+2025-11-15 10:49:28,184 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=14.00 | SUCCESS | 
+2025-11-15 11:00:19,175 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.40 | FAIL | No data
+2025-11-15 11:00:19,176 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=7.54 | SUCCESS | 
+2025-11-15 11:03:31,174 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=9.35 | FAIL | No data
+2025-11-15 11:03:31,175 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=10.35 | SUCCESS | 
+2025-11-15 11:03:51,252 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=8.67 | FAIL | No data
+2025-11-15 11:03:51,253 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=9.14 | SUCCESS | 
+2025-11-15 11:06:45,679 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.52 | FAIL | No data
+2025-11-15 11:06:45,680 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=7.54 | SUCCESS | 
+2025-11-15 11:12:13,051 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=5.82 | FAIL | No data
+2025-11-15 11:12:13,051 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=6.39 | SUCCESS | 
+2025-11-15 11:12:33,803 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31 00:00:00'} | time_ms=2.66 | SUCCESS | 
+2025-11-15 11:12:33,803 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=3.01 | SUCCESS | 
+2025-11-15 11:14:13,392 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31 00:00:00'} | time_ms=3.18 | SUCCESS | 
+2025-11-15 11:14:13,394 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=5.20 | SUCCESS | 
+2025-11-15 11:14:26,808 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31 00:00:00'} | time_ms=2.32 | SUCCESS | 
+2025-11-15 11:14:26,809 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=2.98 | SUCCESS | 
+2025-11-15 11:50:06,795 | INFO | _cached_single_lookup | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31 00:00:00'} | time_ms=3.09 | SUCCESS | 
+2025-11-15 11:50:06,796 | INFO | get_quarterly_data | params={'accord_code': 208763, 'field': 'quarterly_revenue', 'date': '2022-03-31'} | time_ms=5.06 | SUCCESS | 
